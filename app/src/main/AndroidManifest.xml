@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.medium.lovemusic">
+
+    <uses-configuration android:name="android.permission.INTERNET" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+
+    <application
+        android:name="com.medium.lovemusic.MyApplication"
+        android:allowBackup="false"
+        tools:replace="android:allowBackup"
+        android:fitsSystemWindows="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="UnusedAttribute">
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_small_push_notification" />
+
+        <service
+            android:name="com.medium.lovemusic.service.MusicService"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.medium.lovemusic.service.MusicReceiver"
+            android:exported="false" />
+
+        <activity
+            android:exported="true"
+            android:name="com.medium.lovemusic.activity.SplashActivity">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:exported="false"
+            android:name="com.medium.lovemusic.activity.MainActivity" />
+
+        <activity
+            android:exported="false"
+            android:name="com.medium.lovemusic.activity.PlayMusicActivity" />
+
+        <activity
+            android:exported="false"
+            android:name="com.medium.lovemusic.activity.SignInActivity" />
+
+        <activity
+            android:exported="false"
+            android:name="com.medium.lovemusic.activity.SignUpActivity" />
+
+        <activity
+            android:exported="false"
+            android:name="com.medium.lovemusic.activity.ForgotPasswordActivity" />
+
+        <activity
+            android:exported="false"
+            android:name="com.medium.lovemusic.activity.ChangePasswordActivity" />
+
+    </application>
+
+</manifest>

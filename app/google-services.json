@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1011318207130",
+    "firebase_url": "https://musicmedium-63e4b-default-rtdb.firebaseio.com",
+    "project_id": "musicmedium-63e4b",
+    "storage_bucket": "musicmedium-63e4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011318207130:android:6dab3000f377c274142523",
+        "android_client_info": {
+          "package_name": "com.medium.music"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpg_8FmUDo27dQjnxhk9SDEUMVgfoQLDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
